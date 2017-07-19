@@ -1,0 +1,45 @@
+import java.lang.Math; 
+// headers MUST be above the first class
+
+
+
+// one class needs to have a main() method
+public class pangramChecker {
+  
+  private static final int letterCount = 26;
+  
+  public static void main(String[] args) {
+    
+    String sentence = "The five boxing wizards jumped quickly.";
+      //Insert a string sentence above to see if it is a pangram.
+      
+    System.out.println("Is this a pangram : " + Pangram(sentence));
+      // The System.out.println prints out "Is this a pangram : true"
+      // Or prints out "Is this a pangram : false"
+  
+  }
+  
+  private static boolean Pangram(String sentence){
+    
+    if(sentence.length() < letterCount) {
+     
+      return false;
+      
+    }
+    
+    for (char ch = 'A'; ch <= 'Z'; ch++) {
+      
+      if (sentence.indexOf(ch) < 0&& sentence.indexOf((char) (ch + 32)) < 0) {
+        
+       
+        return false;
+     
+      }
+   
+    }
+
+return true;
+ 
+  }
+  
+}
