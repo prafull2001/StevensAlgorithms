@@ -5,10 +5,10 @@ public class HelloWorld
 {
   
   public static boolean check_palindrome(char[] aWord){
-    int x1 = 0;
-    int x2 = aWord.length - 1;
+    int x1 = 0; //create a lower bound
+    int x2 = aWord.length - 1; //create upper bound
     while (x2 > x1) {
-        if (aWord[x1] != aWord[x2]) {
+        if (aWord[x1] != aWord[x2]) {  //if character at index upper/lower bounds aren't =, return false
             return false;
         }
         ++x1;
@@ -24,7 +24,7 @@ public class HelloWorld
   {
     
     String str = "civic"; 
-	char[] charArray = str.toCharArray();
+    char[] charArray = str.toCharArray();	//convert String into Array of chars
     boolean isPalindrome = check_palindrome(charArray);
     System.out.println("IS A PALINDROME: " + isPalindrome);
     
