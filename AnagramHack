@@ -1,0 +1,27 @@
+import java.lang.Math; 
+import java.util.Arrays;
+
+
+public class HelloWorld
+{
+  
+  public static boolean check_anagram(String firstWord, String secondWord) {
+    char[] word1 = firstWord.replaceAll("[\\s]", "").toCharArray();
+    char[] word2 = secondWord.replaceAll("[\\s]", "").toCharArray(); //eliminate empty spaces
+    Arrays.sort(word1);
+    Arrays.sort(word2); //sort arrays from least to greatest using int values of chars
+    return Arrays.equals(word1, word2); //if now sorted arrays are equal, return true; else false
+  }
+
+  
+  
+  public static void main(String[] args)
+  {
+    
+    boolean isAnagram = check_anagram("boat", "bato");
+    System.out.println("IS AN ANAGRAM: " + isAnagram);
+    
+  }
+  
+  
+}
