@@ -2,11 +2,11 @@ import java.lang.Math;
 // headers MUST be above the first class
 
 
-
 // one class needs to have a main() method
 public class pangramChecker {
   
   private static final int letterCount = 26;
+  //The int, letterCount, represents the number of letters in the alphabet. 
   
   public static void main(String[] args) {
     
@@ -22,15 +22,19 @@ public class pangramChecker {
   private static boolean Pangram(String sentence){
     
     if(sentence.length() < letterCount) {
-     
+     //If the all the letters from the String "sentence" do not have the same number of letter as expected from letterCount 
+     //then the sentence is not a pangram. 
       return false;
       
     }
     
     for (char ch = 'A'; ch <= 'Z'; ch++) {
-      
+      //Char "ch" is auto-incremented by 1.
+      //Char "ch" starts from 'A' then it is added by 1 until it reaches 'Z'
+      //ch++ = ch + 1; 
       if (sentence.indexOf(ch) < 0&& sentence.indexOf((char) (ch + 32)) < 0) {
-        
+      //Another way the sentence can be proven false(or not a pangram) is if the sentece 
+      //does have any letters in the index at all.
        
         return false;
      
@@ -39,7 +43,7 @@ public class pangramChecker {
     }
 
 return true;
- 
+ //Of course if all the letters are in the sentence then the String sentence is true. 
   }
   
 }
