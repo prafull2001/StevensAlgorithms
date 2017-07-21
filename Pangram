@@ -29,12 +29,13 @@ public class pangramChecker {
     }
     
     for (char ch = 'A'; ch <= 'Z'; ch++) {
+      //Not only does this program check if the sentence meets the required number from the Int
+      //But it also makes sure that all the letters from the alphabet are also in in the sentence string.
       //Char "ch" is auto-incremented by 1.
       //Char "ch" starts from 'A' then it is added by 1 until it reaches 'Z'
       //ch++ = ch + 1; 
       if (sentence.indexOf(ch) < 0&& sentence.indexOf((char) (ch + 32)) < 0) {
-      //Another way the sentence can be proven false(or not a pangram) is if the sentece 
-      //does have any letters in the index at all.
+      
        
         return false;
      
